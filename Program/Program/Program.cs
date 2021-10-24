@@ -1,6 +1,11 @@
+
+﻿using System;
+using System.Collections.Generic;
+
 ﻿// <copyright file="Program.cs" company="NirEpiPol">
 // Copyright (c) MIIT
 // </copyright>
+
 
 namespace Napas
 {
