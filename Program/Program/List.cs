@@ -8,11 +8,13 @@ namespace Napas
     using System.Collections.Generic;
     using System.Text;
 
-    class Courier6 : User
+    public class List
     {
-        void DeliverKit()
+        private Commodity[] com;
+        public List(int j)
         {
-
+            com = new Commodity[j];
+            com[0] = new Commodity();
         }
     }
 }
