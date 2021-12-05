@@ -1,4 +1,4 @@
-﻿// <copyright file="Courier6.cs" company="NirEpiPol">
+﻿// <copyright file="List.cs" company="NirEpiPol">
 // Copyright (c) MIIT
 // </copyright>
 
@@ -8,13 +8,14 @@ namespace Napas
     using System.Collections.Generic;
     using System.Text;
 
+    /// <summary>
+    /// Список товаров.
+    /// </summary>
     public class List
     {
-        private Commodity[] com;
-        public List(int j)
-        {
-            com = new Commodity[j];
-            com[0] = new Commodity();
-        }
+        /// <summary>
+        /// Список товаров.
+        /// </summary>
+        private List<Commodity> listOfCom = new List<Commodity>() { };
     }
 }
