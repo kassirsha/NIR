@@ -2,7 +2,7 @@
 // Copyright (c) MIIT
 // </copyright>
 
-namespace Napas
+namespace Store.Core
 {
     using System;
     using System.Collections.Generic;
@@ -27,17 +27,17 @@ namespace Napas
         }
 
         /// <summary>
-        /// Идентификатор.
+        /// Получает или задает идентификатор.
         /// </summary>
         public int Id { get; protected set; }
 
         /// <summary>
-        /// Имя.
+        /// Получает или задает имя.
         /// </summary>
         public string Name { get; protected set; }
 
         /// <summary>
-        /// Номер Карты.
+        /// Получает или задает Номер Карты.
         /// </summary>
         public string CreditCard { get; protected set; }
 

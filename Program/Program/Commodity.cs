@@ -2,11 +2,9 @@
 // Copyright (c) MIIT
 // </copyright>
 
-namespace Napas
+namespace Store.Core
 {
-    using System;
     using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// Товар.
@@ -17,26 +15,27 @@ namespace Napas
         /// Инициализирует новый экземпляр класса <see cref="Commodity"/>.
         /// </summary>
         /// <param name="id">Идентификатор. </param>
-        /// <param name="name">Имя. </param> 
+        /// <param name="name">Имя. </param>
         /// <param name="price">Цена. </param>
-        public Commodity(int id, string name, int price) {
+        public Commodity(int id, string name, int price)
+        {
             this.Id = id;
             this.Name = name;
             this.Price = price;
         }
 
         /// <summary>
-        /// Идентификатор.
+        /// Получает или задает идентификатор.
         /// </summary>
         public int Id { get; protected set; }
 
         /// <summary>
-        /// Имя.
+        /// Получает или задает имя.
         /// </summary>
         public string Name { get; protected set; }
 
         /// <summary>
-        /// Цена.
+        /// Получает или задает цену.
         /// </summary>
         public int Price { get; protected set; }
 
@@ -46,5 +45,9 @@ namespace Napas
         /// <returns>Строковое представление товара.</returns>
         public override string ToString() => $"{this.Name} {this.Id} {this.Price}";
 
+        /// <summary>
+        /// Получает или задает товары.
+        /// </summary>
+        public ISet<Commodity> Commodities { get; protected set; } = new HashSet<Commodity>();
     }
 }
