@@ -43,7 +43,7 @@ namespace Store.Core
         /// Представление объекта товар в виде строки.
         /// </summary>
         /// <returns>Строковое представление товара.</returns>
-        public override string ToString() => $"{this.Name} {this.Id} {this.Price}";
+        public override string ToString() => $"Номер: {this.Id} \n Название: {this.Name} \n Цена: {this.Price}";
 
         /// <summary>
         /// Получает или задает товары.

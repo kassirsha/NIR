@@ -5,12 +5,14 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Core", "Program\Store.Core.csproj", "{26D2F0C5-A3E8-462F-B614-4D8C6261ABE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.Core.Test", "Store.Core.Test\Store.Core.Test.csproj", "{32600A68-A91A-4B69-A534-DDE3BDD46F5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store.Core.Test", "Store.Core.Test\Store.Core.Test.csproj", "{32600A68-A91A-4B69-A534-DDE3BDD46F5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store", "Store\Store.csproj", "{9F4BF505-4718-420C-8C57-951933EFAB82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Store", "Store\Store.csproj", "{9F4BF505-4718-420C-8C57-951933EFAB82}"
 	ProjectSection(ProjectDependencies) = postProject
 		{32600A68-A91A-4B69-A534-DDE3BDD46F5B} = {32600A68-A91A-4B69-A534-DDE3BDD46F5B}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DataAccess", "Store.DataAccess\Store.DataAccess.csproj", "{63DCCD62-4E0B-43D8-996E-3C13CDAD6D2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{9F4BF505-4718-420C-8C57-951933EFAB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F4BF505-4718-420C-8C57-951933EFAB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F4BF505-4718-420C-8C57-951933EFAB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DCCD62-4E0B-43D8-996E-3C13CDAD6D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DCCD62-4E0B-43D8-996E-3C13CDAD6D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DCCD62-4E0B-43D8-996E-3C13CDAD6D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DCCD62-4E0B-43D8-996E-3C13CDAD6D2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

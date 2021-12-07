@@ -20,8 +20,7 @@ namespace Store.Core.Test
         {
             // arrange
             var commodity = new Commodity(1, "Ручка", 0);
-            var listcomm = new ListCom(50, commodity);
-            var expected = "Ручка 1 0";
+            var expected = "Номер: 1 \n Название: Ручка \n Цена: 0";
 
             // act
             var actual = commodity.ToString();
