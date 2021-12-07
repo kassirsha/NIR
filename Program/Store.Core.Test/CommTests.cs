@@ -19,9 +19,9 @@ namespace Store.Core.Test
         public void ToString_ValidData_Success()
         {
             // arrange
-            var commodity = new Commodity(1, "Негр", 0);
+            var commodity = new Commodity(1, "Ручка", 0);
             var listcomm = new ListCom(50, commodity);
-            var expected = "Негр 1 0";
+            var expected = "Ручка 1 0";
 
             //act
             var actual = commodity.ToString();
@@ -33,8 +33,8 @@ namespace Store.Core.Test
         public void ToString_EmptyAuthor_Success()
         {
             // arrange
-            var commodity = new Commodity(1, "Негр", 0);
-            var expected = "Негр";
+            var commodity = new Commodity(1, "Ручка", 0);
+            var expected = "Ручка";
 
             //act
             var actual = commodity.ToString();
@@ -47,7 +47,7 @@ namespace Store.Core.Test
         public void Ctor_ValidDataEmptyAuthors_Success()
         {
             // arrange & act & assert
-            Assert.DoesNotThrow(() => _ = new Commodity(1, "Негр", 0));
+            Assert.DoesNotThrow(() => _ = new Commodity(1, "Ручка", 0));
         }
 
         [Test]
