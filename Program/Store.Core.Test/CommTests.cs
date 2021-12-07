@@ -23,7 +23,7 @@ namespace Store.Core.Test
             var listcomm = new ListCom(50, commodity);
             var expected = "Ручка 1 0";
 
-            //act
+            // act
             var actual = commodity.ToString();
 
             // assert
@@ -31,7 +31,7 @@ namespace Store.Core.Test
         }
 
         [Test]
-        public void Ctor_ValidDataEmptyAuthors_Success()
+        public void Ctor_ValidDataEmptyCommodities_Success()
         {
             // arrange & act & assert
             Assert.DoesNotThrow(() => _ = new Commodity(1, "Ручка", 0));
