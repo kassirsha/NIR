@@ -29,39 +29,12 @@ namespace Store.Core.Test
             // assert
             Assert.AreEqual(expected, actual);
         }
-        [Test]
-        public void ToString_EmptyAuthor_Success()
-        {
-            // arrange
-            var commodity = new Commodity(1, "Ручка", 0);
-            var expected = "Ручка";
-
-            //act
-            var actual = commodity.ToString();
-
-            // assert
-            Assert.AreEqual(expected, actual);
-        }
 
         [Test]
         public void Ctor_ValidDataEmptyAuthors_Success()
         {
             // arrange & act & assert
             Assert.DoesNotThrow(() => _ = new Commodity(1, "Ручка", 0));
-        }
-
-        [Test]
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("  ")]
-        [TestCase("\0")]
-        [TestCase("\n")]
-        [TestCase("\r")]
-        [TestCase("\t")]
-        public void Ctor_WrongDataNullTitleEmptyAuthors_Fail(string wrongTitle)
-        {
-            // act & assert
-            Assert.Throws<ArgumentOutOfRangeException>(() => _ = new Commodity(1, wrongTitle, 0));
         }
     }
 }
