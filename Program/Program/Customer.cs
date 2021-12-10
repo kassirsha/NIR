@@ -5,8 +5,6 @@
 namespace Store.Core
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// Покупатель.
@@ -18,28 +16,35 @@ namespace Store.Core
         /// </summary>
         /// <param name="id">Идентификатор. </param>
         /// <param name="name">Имя. </param>
+        /// <param name="surname">Фамилия. </param>
         /// <param name="creditCard">Номер Карты. </param>
-        public Customer(int id, string name, string creditCard)
+        public Customer(Guid id, string name, string surname, string creditCard)
         {
             this.Id = id;
-            this.Name = name;
-            this.CreditCard = creditCard;
+            this.Name = name ?? throw new ArgumentNullException(nameof(name));
+            this.Surname = surname ?? throw new ArgumentNullException(nameof(surname));
+            this.CreditCard = creditCard ?? throw new ArgumentNullException(nameof(creditCard));
         }
 
         /// <summary>
         /// Получает или задает идентификатор.
         /// </summary>
-        public int Id { get; protected set; }
+        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// Получает или задает имя.
         /// </summary>
-        public string Name { get; protected set; }
+        public virtual string Name { get; protected set; }
+
+        /// <summary>
+        /// Получает или задает фамилию.
+        /// </summary>
+        public virtual string Surname { get; protected set; }
 
         /// <summary>
         /// Получает или задает Номер Карты.
         /// </summary>
-        public string CreditCard { get; protected set; }
+        public virtual string CreditCard { get; protected set; }
 
         /// <summary>
         /// Представление объекта покупатель в виде строки.

@@ -5,7 +5,7 @@
     using NUnit.Framework;
 
     /// <summary>
-    /// Тесты на правила отображения <see cref="Library.DataAccess.Mappings.BookMap"/>.
+    /// Тесты на правила отображения <see cref="Store.DataAccess.Mappings.BookMap"/>.
     /// </summary>
     [TestFixture]
     internal class CommMapTests : BaseMapTests
@@ -14,10 +14,10 @@
         public void PersistenceSpecification_ValidData_Success()
         {
             // arrange
-            var commodity = new Commodity(1, "Книга", 0);
+            var commodity = new Product(1, "Книга", 0);
 
             // act & assert
-            new PersistenceSpecification<Commodity>(this.Session)
+            new PersistenceSpecification<Product>(this.Session)
                 .VerifyTheMappings(commodity);
         }
     }

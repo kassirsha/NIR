@@ -19,11 +19,11 @@ namespace Store.Core.Test
         public void ToString_ValidData_Success()
         {
             // arrange
-            var commodity = new Commodity(1, "Ручка", 0);
+            var product = new Product(1, "Ручка", 0);
             var expected = "Номер: 1 \n Название: Ручка \n Цена: 0";
 
             // act
-            var actual = commodity.ToString();
+            var actual = product.ToString();
 
             // assert
             Assert.AreEqual(expected, actual);
@@ -33,7 +33,7 @@ namespace Store.Core.Test
         public void Ctor_ValidDataEmptyCommodities_Success()
         {
             // arrange & act & assert
-            Assert.DoesNotThrow(() => _ = new Commodity(1, "Ручка", 0));
+            Assert.DoesNotThrow(() => _ = new Product(1, "Ручка", 0));
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Store.Demo
     {
         private static void Main()
         {
-            var commodity = new Commodity(1, "Ручка", 0);
+            var commodity = new Product(1, "Ручка", 0);
             Console.WriteLine($"{commodity}");
         }
     }
