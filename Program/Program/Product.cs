@@ -9,25 +9,18 @@ namespace Store.Core
     /// <summary>
     /// Товар.
     /// </summary>
-    public class Product
+    public class Product : BaseEntity<Product>
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Product"/>.
         /// </summary>
-        /// <param name="id">Идентификатор. </param>
         /// <param name="name">Имя. </param>
         /// <param name="price">Цена. </param>
-        public Product(Guid id, string name, decimal price)
+        public Product(string name, decimal price)
         {
-            this.Id = id;
             this.Name = name ?? throw new ArgumentNullException(nameof(name));
             this.Price = price;
         }
-
-        /// <summary>
-        /// Получает или задает идентификатор.
-        /// </summary>
-        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// Получает или задает имя.
@@ -43,7 +36,7 @@ namespace Store.Core
         /// Представление объекта товар в виде строки.
         /// </summary>
         /// <returns>Строковое представление товара.</returns>
-        public override string ToString() => $"Номер: {this.Id} \n Название: {this.Name} \n Цена: {this.Price}";
+        public override string ToString() => $"Название: {this.Name} \n Цена: {this.Price}";
 
     }
 }

@@ -14,7 +14,7 @@
         public void PersistenceSpecification_ValidData_Success()
         {
             // arrange
-            var commodity = new Product(1, "Книга", 0);
+            var commodity = new Product("Книга", 0);
 
             // act & assert
             new PersistenceSpecification<Product>(this.Session)

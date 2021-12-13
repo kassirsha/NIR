@@ -9,7 +9,7 @@
     /// <summary>
     /// Настройщик подключения к БД и поставщик фабрики сессий.
     /// </summary>
-    public static class Configurator
+    public static class NHibernateConfigurator
     {
         /// <summary>
         /// Конфигурация.
@@ -48,8 +48,8 @@
             {
                 var databaseConfiguration = MsSqlConfiguration.MsSql2012.ConnectionString(
                     x => x
-                        .Server(settings.GetDatabaseServer())
-                        .Database(settings.GetDatabaseName())
+                        .Server(@"DESKTOP-4A7K70F\SQLEXPRESS")
+                        .Database("Store")
                         .TrustedConnection());
 
                 if (showSql)

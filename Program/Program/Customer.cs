@@ -9,27 +9,20 @@ namespace Store.Core
     /// <summary>
     /// Покупатель.
     /// </summary>
-    public class Customer
+    public class Customer : BaseEntity<Customer>
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Customer"/>.
         /// </summary>
-        /// <param name="id">Идентификатор. </param>
         /// <param name="name">Имя. </param>
         /// <param name="surname">Фамилия. </param>
         /// <param name="creditCard">Номер Карты. </param>
-        public Customer(Guid id, string name, string surname, string creditCard)
+        public Customer(string name, string surname, string creditCard)
         {
-            this.Id = id;
             this.Name = name ?? throw new ArgumentNullException(nameof(name));
             this.Surname = surname ?? throw new ArgumentNullException(nameof(surname));
             this.CreditCard = creditCard ?? throw new ArgumentNullException(nameof(creditCard));
         }
-
-        /// <summary>
-        /// Получает или задает идентификатор.
-        /// </summary>
-        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// Получает или задает имя.
@@ -47,9 +40,14 @@ namespace Store.Core
         public virtual string CreditCard { get; protected set; }
 
         /// <summary>
+        /// Получает или задает заказ.
+        /// </summary>
+        public virtual Order Order { get; protected set; }
+
+        /// <summary>
         /// Представление объекта покупатель в виде строки.
         /// </summary>
         /// <returns>Строковое представление покупатель.</returns>
-        public override string ToString() => $"{this.Name} {this.Id} {this.CreditCard}";
+        public override string ToString() => $"{this.Name} {this.CreditCard}";
     }
 }

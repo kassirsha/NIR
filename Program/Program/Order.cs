@@ -10,23 +10,16 @@ namespace Store.Core
     /// <summary>
     /// Список товаров.
     /// </summary>
-    public class Order
+    public class Order : BaseEntity<Order>
     {
         /// <summary>
         /// Инициализирует новый экземпляр класса <see cref="Order"/>.
         /// </summary>
-        /// <param name="id">Идентификатор. </param>
         /// <param name="orderTotal">Итоговая цена.</param>
-        public Order(Guid id, decimal orderTotal)
+        public Order(decimal orderTotal)
         {
-            this.Id = id;
             this.OrderTotal = orderTotal;
         }
-
-        /// <summary>
-        /// Получает или задает идентификатор.
-        /// </summary>
-        public virtual Guid Id { get; protected set; }
 
         /// <summary>
         /// Получает или задает количество.

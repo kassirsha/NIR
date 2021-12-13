@@ -19,8 +19,8 @@ namespace Store.Core.Test
         public void ToString_ValidData_Success()
         {
             // arrange
-            var product = new Product(1, "Ручка", 0);
-            var expected = "Номер: 1 \n Название: Ручка \n Цена: 0";
+            var product = new Product("Ручка", 0);
+            var expected = "Название: Ручка \n Цена: 0";
 
             // act
             var actual = product.ToString();
@@ -33,7 +33,7 @@ namespace Store.Core.Test
         public void Ctor_ValidDataEmptyCommodities_Success()
         {
             // arrange & act & assert
-            Assert.DoesNotThrow(() => _ = new Product(1, "Ручка", 0));
+            Assert.DoesNotThrow(() => _ = new Product("Ручка", 0));
         }
     }
 }
