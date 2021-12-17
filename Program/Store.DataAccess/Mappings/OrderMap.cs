@@ -24,7 +24,11 @@
                 .Cascade.Delete();
 
             this.HasOne(x => x.Customer)
-                .Cascade.Delete();
+               .Cascade.Delete();
+
+            //this.References(x => x.Products);
+
+            //this.References(x => x.Customer);
         }
     }
 }

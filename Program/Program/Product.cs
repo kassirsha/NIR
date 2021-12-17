@@ -5,6 +5,7 @@
 namespace Store.Core
 {
     using System;
+    using System.Collections.Generic;
 
     /// <summary>
     /// Товар.
@@ -44,6 +45,7 @@ namespace Store.Core
         /// </summary>
         public virtual Order Order { get; protected set; }
 
+        public virtual ISet<Order> Orders { get; protected set; } = new HashSet<Order>();
         /// <summary>
         /// Представление объекта товар в виде строки.
         /// </summary>

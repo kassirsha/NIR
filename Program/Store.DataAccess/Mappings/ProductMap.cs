@@ -21,7 +21,9 @@
 
             this.Map(x => x.Price).Length(255);
 
-            this.HasOne(x => x.Order)
+            this.References(x => x.Order);
+
+            this.HasMany(x => x.Orders)
                 .Cascade.Delete();
 
         }
