@@ -25,6 +25,13 @@ namespace Store.Core
         }
 
         /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Customer"/>.
+        /// </summary>
+        [Obsolete("for ORM", true)]
+        protected Customer() 
+        { }
+
+        /// <summary>
         /// Получает или задает имя.
         /// </summary>
         public virtual string Name { get; protected set; }

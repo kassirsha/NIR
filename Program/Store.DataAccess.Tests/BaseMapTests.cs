@@ -13,7 +13,7 @@
         [SetUp]
         public void SetUp()
         {
-            this.Session = NHibernateTestsConfigurator.BuildSessionForTest();
+            this.Session = TestsConfigurator.BuildSessionForTest();
         }
 
         [TearDown]

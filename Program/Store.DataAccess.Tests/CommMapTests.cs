@@ -5,10 +5,10 @@
     using NUnit.Framework;
 
     /// <summary>
-    /// Тесты на правила отображения <see cref="Store.DataAccess.Mappings.BookMap"/>.
+    /// Тесты на правила отображения <see cref="Mappings.ProductMap"/>.
     /// </summary>
     [TestFixture]
-    internal class CommMapTests : BaseMapTests
+    internal class ProductMapTests : BaseMapTests
     {
         [Test]
         public void PersistenceSpecification_ValidData_Success()

@@ -1,19 +1,7 @@
 ﻿namespace Store.DataAccess
 {
-    using System;
-    using System.Configuration;
-
     public sealed class Settings
     {
-        //private const string ServerNameKey = "databaseServer";
-
-        //private readonly Configuration configuration;
-
-        //public Settings(Configuration configuration)
-        //{
-        //    this.configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
-        //}
-
         private string databaseServerName;
 
         private string databaseName;

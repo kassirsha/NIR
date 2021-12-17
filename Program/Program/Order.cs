@@ -22,13 +22,25 @@ namespace Store.Core
         }
 
         /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Order"/>.
+        /// </summary>
+        [Obsolete("for ORM", true)]
+        protected Order()
+        { }
+
+        /// <summary>
         /// Получает или задает количество.
         /// </summary>
         public virtual decimal OrderTotal { get; protected set; }
 
         /// <summary>
+        /// Получает или задает заказ.
+        /// </summary>
+        public virtual Customer Customer { get; protected set; }
+
+        /// <summary>
         /// Получает или задает товары.
         /// </summary>
-        public ISet<Product> Products { get; protected set; } = new HashSet<Product>();
+        public virtual ISet<Product> Products { get; protected set; } = new HashSet<Product>();
     }
 }

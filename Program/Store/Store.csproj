@@ -16,5 +16,8 @@
 	</ItemGroup>	
 	<ItemGroup>
 		<ProjectReference Include="..\Program\Store.Core.csproj" />
+		<ProjectReference Include="..\Store.DataAccess\Store.DataAccess.csproj" />
+		<ProjectReference Include="..\Store.DataAccess.Tests\Store.DataAccess.Tests.csproj" />
+		<ProjectReference Include="..\Program\Store.Core.csproj" />
 	</ItemGroup>
 </Project>

@@ -13,14 +13,18 @@
         /// </summary>
         public OrderMap()
         {
-            this.Table("Order");
+            this.Table("Order_1");
 
             this.Id(x => x.Id).GeneratedBy.Guid();
 
-            this.Map(x => x.OrderTotal);
+            this.Map(x => x.OrderTotal).Length(255);
 
-            this.HasMany(x => x.Products);
+            this.HasMany(x => x.Products)
+                .Not.Inverse()
+                .Cascade.Delete();
 
+            this.HasOne(x => x.Customer)
+                .Cascade.Delete();
         }
     }
 }

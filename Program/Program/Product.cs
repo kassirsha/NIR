@@ -23,6 +23,13 @@ namespace Store.Core
         }
 
         /// <summary>
+        /// Инициализирует новый экземпляр класса <see cref="Product"/>.
+        /// </summary>
+        [Obsolete("for ORM", true)]
+        protected Product()
+        { }
+
+        /// <summary>
         /// Получает или задает имя.
         /// </summary>
         public virtual string Name { get; protected set; }
@@ -31,6 +38,11 @@ namespace Store.Core
         /// Получает или задает цену.
         /// </summary>
         public virtual decimal Price { get; protected set; }
+
+        /// <summary>
+        /// Получает или задает заказ.
+        /// </summary>
+        public virtual Order Order { get; protected set; }
 
         /// <summary>
         /// Представление объекта товар в виде строки.

@@ -10,7 +10,7 @@
     /// <summary>
     /// Класс для настройки соединения для тестов.
     /// </summary>
-    public class NHibernateTestsConfigurator
+    public class TestsConfigurator
     {
         private static Configuration configuration;
 
