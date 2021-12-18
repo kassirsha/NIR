@@ -23,9 +23,9 @@ namespace Store.DataAccess.Mappings
 
             this.Map(x => x.CreditCard).Length(255);
 
-            this.References(x => x.Order);
-            //this.HasOne(x => x.Order)
-             //  .Cascade.Delete();
+            //this.References(x => x.Order);
+            this.HasMany(x => x.Orders)
+               .Cascade.Delete();
 
 
         }

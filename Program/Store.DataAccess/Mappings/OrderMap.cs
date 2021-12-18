@@ -19,16 +19,10 @@
 
             this.Map(x => x.OrderTotal).Length(255);
 
-            this.HasMany(x => x.Products)
-                .Not.Inverse()
+            this.HasMany(x => x.LineItems)
+                .Inverse()
                 .Cascade.Delete();
 
-            this.HasOne(x => x.Customer)
-               .Cascade.Delete();
-
-            //this.References(x => x.Products);
-
-            //this.References(x => x.Customer);
         }
     }
 }

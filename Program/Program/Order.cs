@@ -41,6 +41,6 @@ namespace Store.Core
         /// <summary>
         /// Получает или задает товары.
         /// </summary>
-        public virtual ISet<Product> Products { get; protected set; } = new HashSet<Product>();
+        public virtual ISet<LineItems> LineItems { get; protected set; } = new HashSet<LineItems>();
     }
 }
