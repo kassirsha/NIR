@@ -41,6 +41,7 @@ namespace Store.Core
         public virtual decimal Price { get; protected set; }
 
         public virtual ISet<LineItems> LineItems { get; protected set; } = new HashSet<LineItems>();
+
         /// <summary>
         /// Представление объекта товар в виде строки.
         /// </summary>

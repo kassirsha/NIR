@@ -14,11 +14,11 @@
         public void PersistenceSpecification_ValidData_Success()
         {
             // arrange
-            var commodity = new Product("Книга", 0);
+            var product = new Product("Книга", 0);
 
             // act & assert
             new PersistenceSpecification<Product>(this.Session)
-                .VerifyTheMappings(commodity);
+                .VerifyTheMappings(product);
         }
     }
 }

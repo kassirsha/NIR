@@ -5,9 +5,9 @@
 namespace Store.Demo
 {
     using System;
-    using Store.DataAccess.Tests;
-    using Store.DataAccess;
     using Store.Core;
+    using Store.DataAccess;
+    using Store.DataAccess.Tests;
 
     /// <summary>
     /// Точка входа в программу.
@@ -17,7 +17,8 @@ namespace Store.Demo
         private static void Main()
         {
             var product = new Product("Быба", 1000);
-
+            var order = new Order(1000);
+            var customer = new Customer("Виталий", "Пупкин", "6456-2342-6452-5436");
             var settings = new Settings();
 
             // settings.AddDatabaseServer(@"DESKTOP-2AJV31B\SQLEXPRESS");
@@ -31,6 +32,8 @@ namespace Store.Demo
             using (var session = sessionFactory.OpenSession())
             {
                 session.Save(product);
+                session.Save(order);
+                session.Save(customer);
                 session.Flush();
             }
 
