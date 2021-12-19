@@ -40,11 +40,6 @@ namespace Store.Core
         /// </summary>
         public virtual decimal Price { get; protected set; }
 
-        /// <summary>
-        /// Получает или задает заказ.
-        /// </summary>
-        //public virtual Order Order { get; protected set; }
-
         public virtual ISet<LineItems> LineItems { get; protected set; } = new HashSet<LineItems>();
         /// <summary>
         /// Представление объекта товар в виде строки.

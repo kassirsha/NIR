@@ -16,15 +16,6 @@
             this.Table("LineItems");
 
             this.Id(x => x.Id).GeneratedBy.Guid();
-
-            //this.HasMany(x => x.Orders)
-            //    .Inverse()
-            //    .Cascade.Delete(); 
-            //this.HasMany(x => x.Products)
-            //    .Inverse()
-            //    .Cascade.Delete(); 
-            //this.References(x => x.Order);
-            //this.References(x => x.Product);
             
         }
     }
