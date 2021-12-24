@@ -21,9 +21,9 @@ namespace Store.Demo
             var customer = new Customer("Виталий", "Пупкин", "6456-2342-6452-5436");
             var settings = new Settings();
 
-            // settings.AddDatabaseServer(@"DESKTOP-2AJV31B\SQLEXPRESS");
+            settings.AddDatabaseServer(@"DESKTOP-2AJV31B\SQLEXPRESS");
 
-            settings.AddDatabaseServer(@"DESKTOP-4A7K70F\SQLEXPRESS");
+            //settings.AddDatabaseServer(@"DESKTOP-4A7K70F\SQLEXPRESS");
             settings.AddDatabaseName("Store");
 
             using var sessionFactory = FluentNHibernateConfigurator
