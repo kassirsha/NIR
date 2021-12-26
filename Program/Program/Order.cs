@@ -56,5 +56,11 @@ namespace Store.Core
 
             this.Customer?.Orders.Add(this);
         }
+
+        /// <summary>
+        /// Представление объекта заказ в виде строки.
+        /// </summary>
+        /// <returns>Строковое представление покупатель.</returns>
+        public override string ToString() => $"{this.Customer.Name} {this.OrderTotal}";
     }
 }

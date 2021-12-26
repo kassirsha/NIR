@@ -1,4 +1,4 @@
-﻿// <copyright file="CommTests.cs" company="NirEpiPol">
+﻿// <copyright file="ProductTests.cs" company="NirEpiPol">
 // Copyright (c) MIIT
 // </copyright>
 
@@ -13,7 +13,7 @@ namespace Store.Core.Test
     /// <summary>
     /// Тесты.
     /// </summary>
-    public class CommTests
+    public class ProductTests
     {
         [Test]
         public void ToString_ValidData_Success()
