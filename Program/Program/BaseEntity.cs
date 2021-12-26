@@ -10,7 +10,8 @@ namespace Store.Core
     /// Базовая сущность.
     /// </summary>
     /// <typeparam name="T"> Сущность. </typeparam>
-    public abstract class BaseEntity<T> where T : BaseEntity<T>
+    public abstract class BaseEntity<T> 
+        where T : BaseEntity<T>
     {
         /// <summary>
         /// Хеш-код идентификатора для persistent объекта.
@@ -18,7 +19,7 @@ namespace Store.Core
         private int? oldHashCode;
 
         /// <summary>
-        /// Уникальный идентификатор.
+        /// Получает или задает уникальный идентификатор.
         /// </summary>
         public virtual Guid Id { get; protected set; }
 

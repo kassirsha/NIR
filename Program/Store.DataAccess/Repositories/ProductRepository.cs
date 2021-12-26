@@ -10,7 +10,7 @@ namespace Store.DataAccess.Repositories
     /// <summary>
     /// Репозиторий для Книги.
     /// </summary>
-    public class OrderRepository : IRepository<Order>
+    public class ProductRepository : IRepository<Product>
     {
         private ISession session;
 
@@ -19,38 +19,38 @@ namespace Store.DataAccess.Repositories
         /// </summary>
         /// <param name="session"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public OrderRepository(ISession session)
+        public ProductRepository(ISession session)
         {
             this.session = session
                 ?? throw new ArgumentNullException(nameof(session));
         }
 
         /// <inheritdoc/>
-        public IQueryable<Order> Filter(Expression<Func<Order, bool>> predicate)
+        public IQueryable<Product> Filter(Expression<Func<Product, bool>> predicate)
         {
             return this.GetAll().Where(predicate);
         }
 
 
         /// <inheritdoc/>
-        public Order Find(Expression<Func<Order, bool>> predicate)
+        public Product Find(Expression<Func<Product, bool>> predicate)
         {
             return this.GetAll().FirstOrDefault(predicate);
         }
 
-        public Order Get(Guid id)
+        public Product Get(Guid id)
         {
-            return this.session?.Get<Order>(id);
+            return this.session?.Get<Product>(id);
         }
 
         /// <inheritdoc/>
-        public IQueryable<Order> GetAll()
+        public IQueryable<Product> GetAll()
         {
-            return this.session?.Query<Order>();
+            return this.session?.Query<Product>();
         }
 
         /// <inheritdoc/>
-        public bool Save(Order entity)
+        public bool Save(Product entity)
         {
             try
             {
@@ -63,5 +63,15 @@ namespace Store.DataAccess.Repositories
                 return false;
             }
         }
+        public Product GetByName(string name)
+        {
+            return this.GetAll().FirstOrDefault<Product>(x => x.Name == name);
+        }
+
+        public IQueryable<Product> FindBooksStartNameWith(string str)
+        {
+            return this.GetAll().Where(x => x.Name.StartsWith(str));
+        }
+        
     }
 }

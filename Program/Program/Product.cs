@@ -28,7 +28,8 @@ namespace Store.Core
         /// </summary>
         [Obsolete("for ORM", true)]
         protected Product()
-        { }
+        {
+        }
 
         /// <summary>
         /// Получает или задает имя.
@@ -40,6 +41,9 @@ namespace Store.Core
         /// </summary>
         public virtual decimal Price { get; protected set; }
 
+        /// <summary>
+        /// Получает или задает Список Товаров.
+        /// </summary>
         public virtual ISet<LineItems> LineItems { get; protected set; } = new HashSet<LineItems>();
 
         /// <summary>
@@ -47,6 +51,5 @@ namespace Store.Core
         /// </summary>
         /// <returns>Строковое представление товара.</returns>
         public override string ToString() => $"Название: {this.Name} \n Цена: {this.Price}";
-
     }
 }
