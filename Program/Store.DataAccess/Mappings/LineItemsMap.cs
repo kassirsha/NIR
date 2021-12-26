@@ -16,7 +16,7 @@
             this.Table("LineItems");
 
             this.Id(x => x.Id).GeneratedBy.Guid();
-            
+
         }
     }
 }

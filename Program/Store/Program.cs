@@ -17,8 +17,12 @@ namespace Store.Demo
         private static void Main()
         {
             var product = new Product("Быба", 1000);
+            var line = new LineItems(0);
             var order = new Order(1000);
             var customer = new Customer("Виталий", "Пупкин", "6456-2342-6452-5436");
+            line.Purchase(product);
+            line.AddOrder(order);
+            order.AddCustomer(customer);
             var settings = new Settings();
 
             // settings.AddDatabaseServer(@"DESKTOP-2AJV31B\SQLEXPRESS");

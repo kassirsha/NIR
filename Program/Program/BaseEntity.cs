@@ -10,7 +10,7 @@ namespace Store.Core
     /// Базовая сущность.
     /// </summary>
     /// <typeparam name="T"> Сущность. </typeparam>
-    public abstract class BaseEntity<T> 
+    public abstract class BaseEntity<T>
         where T : BaseEntity<T>
     {
         /// <summary>

@@ -29,8 +29,9 @@ namespace Store.Core
         /// Инициализирует новый экземпляр класса <see cref="Customer"/>.
         /// </summary>
         [Obsolete("for ORM", true)]
-        protected Customer() 
-        { }
+        protected Customer()
+        {
+        }
 
         /// <summary>
         /// Получает или задает имя.

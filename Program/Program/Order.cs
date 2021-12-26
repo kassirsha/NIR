@@ -26,7 +26,8 @@ namespace Store.Core
         /// </summary>
         [Obsolete("for ORM", true)]
         protected Order()
-        { }
+        {
+        }
 
         /// <summary>
         /// Получает или задает количество.
@@ -42,5 +43,18 @@ namespace Store.Core
         /// Получает или задает товары.
         /// </summary>
         public virtual ISet<LineItems> LineItems { get; protected set; } = new HashSet<LineItems>();
+
+        /// <summary>
+        /// Функция добавить клиента.
+        /// </summary>
+        /// <param name="customer">Добавить клиента.</param>
+        public virtual void AddCustomer(Customer customer)
+        {
+            this.Customer?.Orders.Remove(this);
+
+            this.Customer = customer ?? throw new ArgumentNullException(nameof(customer));
+
+            this.Customer?.Orders.Add(this);
+        }
     }
 }
